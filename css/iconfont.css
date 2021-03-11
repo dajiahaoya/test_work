@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1614759876847'); /* IE9 */
+  src: url('iconfont.eot?t=1614759876847#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOwAAsAAAAAB9gAAANjAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDMIJoATYCJAMMCwgABCAFhG0HRxu/BsiemjxBBGrBglRQ2Qpgh4gH/o+998XPVdhGkbhxezQNR2vwpA1sGkBRuDOQ9fES+PPmfWXSgZARsTyN+9P+Mn1pFhKu4m3/32VDIC6KhuZhNNbpQrl34otwEX69VAXc/5/L6a3E529bLnNMPuoFGAcUpntgm6xAEkzEe4wNtPs5TUBVtxQ2M3Utg4GjzJgUEDYlsQ84pqxyTWNQFhRLVmbhjJ1yPIl3Aaf+58O/rOBIVEiMmXMbtRZQ8TN8uunEWjpdhGw8N7h1JIwAMmG91LuGC7MjOFVFa1tfWZQFcazEX8OXquqi+YdHFAhFRn09GCDm6KRktoDI7xP5WctuTl8k+QMAnOvG9r475WlXj2p9y5jdk5L3HDl8O2fr+ZANHsdNuXN20m6OPWzV2bjjoUOJuyZmRTjrVv6Oc4FrD8Vuc5lzF7Jnjt5y684VvvpC7DF81OHe65/Y8qL+2ss3Ph3jPvvKhnt7q8/eDFde6G7c62t5+iSo6T+9YU+8x7bLiTt7Z7dtX3/gROypOcU7ju1bG3N3bNOQjByzuq3dgYtnEhHcemhhDix8+AIo0S2GZK3bkrqBMuBrgC8bL4ml5pCPabC7u63/6M8C2c2+1+9uB4Urnm9t0Jx984Wu2Lc9M8X/L4fqgoUKBJH7aKiWj7D89n1bPTPxu+Iu+cy8TY2nQkR+eHB8iA9eTMF1t14AtdO0ZEfy0p409Gd9x3VB+6gej5J/ji4ZfGPrVQzXZNCuFiiLtJb9GlnLtqwqDFvKstSW6r5kNhEWQTGv80OaodX7/v4OIHYHZV6GEJV0QVLWg2bKCBTUGYWisnGoGla/vk4bihNyBUOmAQTNDkDU6AmSZvfQTHkHBZ2+QVFz4KBqJfjsWKcvSM7VFPcxbEH9o5DEE12wHMw5aByIxWFqH00qfOpQTE0pgTKVyRbqsY7pGHPM4WIWYwISKNFQHZyHVZUggxIZ8yzNyphRlK6Xshel8UQDzqZRWB8Gs0D6jYJIeIROcLszzrn3D4SJhlH1oTWkivBQGGWS+kcypclogdZr9Vaka7nENJwoC8MIEAFFaJA6GIapVARilA+TYTwmjbVH2lAk3ewktNWmza/Xnm8PVBnzU4ghhaxzETMm6aJ5+OWMEpUY7Drcpm3/eVoAAAA=') format('woff2'),
+  url('iconfont.woff?t=1614759876847') format('woff'),
+  url('iconfont.ttf?t=1614759876847') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1614759876847#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Settingscontroloptions:before {
+  content: "\e9d3";
+}
+
+.icon-bell:before {
+  content: "\e85a";
+}
+

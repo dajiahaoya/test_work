@@ -1,0 +1,31 @@
+.footer_all{
+	background-color: #202124;
+}
+
+.footer{
+	height: 253px;
+	background-color: #202124;
+	margin-top: 53px;
+}
+
+.footer-logo{
+	float: left;
+	width: 105px;
+	height: 30px;
+	background-color: #f92525;
+	margin: 90px auto;
+}
+
+.nav_title{
+	color: #FFFFFF;
+	float: left;
+	margin-top: 79px;
+	padding-left: 119px;
+	font-family: Raleway-Bold;
+	font-size: 13px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 28px;
+	letter-spacing: 0px;
+	color: #ffffff;
+}
