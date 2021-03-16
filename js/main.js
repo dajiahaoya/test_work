@@ -32,8 +32,8 @@ function carousel() {
 	carousels.onmouseleave = function() {
 		autoPlay();
 	}
-	
-	function next_pic() {//点击去到下一张图片
+
+	function next_pic() { //点击去到下一张图片
 		index++;
 		if (index > 4) {
 			index = 0;
@@ -48,7 +48,7 @@ function carousel() {
 		wrap.style.left = newLeft + "px";
 	}
 
-	function prev_pic() {//点击回到上一张图片
+	function prev_pic() { //点击回到上一张图片
 		index--;
 		if (index < 0) {
 			index = 4;
@@ -96,8 +96,10 @@ function carousel() {
 }
 carousel();
 
-function curve() {//曲线数据展示
+function curve() { //曲线数据展示
 	var myChart = echarts.init(document.querySelector('.curve_show'));
+	var arr = [];
+	var arr2 = [];
 	var option = {
 		title: {
 			text: "曲线图数据展示",
@@ -116,6 +118,7 @@ function curve() {//曲线数据展示
 			containLabel: true
 		},
 		xAxis: {
+			data: arr2,
 			type: 'category',
 			boundaryGap: true,
 			axisTick: {
@@ -123,10 +126,7 @@ function curve() {//曲线数据展示
 			},
 			axisLine: {
 				show: false
-			},
-			data: ['01/26', '01/28', '01/30', '02/01', '02/03', '02/05', '02/07', '02/09', '02/11', '02/13',
-				'02/15', '02/17', '02/19', '02/21', '02/23'
-			]
+			}
 		},
 		yAxis: {
 			type: 'value',
@@ -140,7 +140,7 @@ function curve() {//曲线数据展示
 			}
 		},
 		series: [{
-			data: [8972, 6448, 7458, 5824, 8123, 200, 300, 5310, 7483, 1435, 9426, 8187, 8297, 443, 9135],
+			data: arr,
 			type: 'line',
 			areaStyle: {},
 			smooth: true,
@@ -150,10 +150,55 @@ function curve() {//曲线数据展示
 		}]
 	};
 	myChart.setOption(option);
+	//ajax获取数据
+	let xhr = new XMLHttpRequest();
+	xhr.open('get', 'https://edu.telking.com/api/?type=month', true);
+	xhr.onload = function() {
+		if (xhr.readyState == 4 && xhr.status == 200) {
+			var o = JSON.parse(xhr.responseText);
+			// console.log(o.data["series"]); 
+			for (var i = 0; i < o.data.series.length; i++) {
+				// console.log(o["data"].series[i]);
+				arr.push(o["data"].series[i]);
+			}
+			for (var j = 0; j < o.data.xAxis.length; j++) {
+				arr2.push(o["data"].xAxis[j]);
+			}
+			myChart.setOption({
+				xAxis: {
+					data: arr2,
+					type: 'category',
+					boundaryGap: true,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						show: false
+					},
+					axisTick: {
+						alignWithLabel: true
+					}
+				},
+				series: {
+					data: arr,
+					type: 'line',
+					areaStyle: {},
+					smooth: true,
+					areaStyle: {
+						color: "#F3F7FE"
+					}
+				}
+			});
+			// console.log(JSON.parse(xhr.response));  
+		}
+	}
+	xhr.send();
+	myChart.setOption(option);
+	// console.log(option.xAxis);
 }
 curve();
 
-function pie() {//饼状数据展示图
+function pie() { //饼状数据展示图
 	var myChart = echarts.init(document.querySelector('.piechart_show'));
 	var option = {
 		title: {
@@ -211,7 +256,7 @@ function pie() {//饼状数据展示图
 }
 pie();
 
-function bar() {//柱状图数据展示
+function bar() { //柱状图数据展示
 	var myChart = echarts.init(document.querySelector('.barchart_show'));
 	var option = {
 		color: ['#4586EF'],
